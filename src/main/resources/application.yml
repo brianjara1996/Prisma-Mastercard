@@ -1,0 +1,36 @@
+logging:
+  level:
+    org:
+      hibernate: info
+      SQL: info
+      stat: info
+springdoc:
+  api-docs:
+    path: ${PATH_OPEN_API}
+spring:
+  jackson:
+    default-property-inclusion: non-null
+  config:
+    activate:
+      on-profile: default
+  jpa:
+    database: SQL_SERVER
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driverClassName: ${DB_DRIVER_CLASS_NAME}
+server:
+  port: ${PORT}
+  servlet:
+    context-path: ${BASE_PATH}
+    
+        
+ENCRIPTAR:
+  ENC_KEY: bf3c200c2471cb478d908b1e0918c18b
+  IV: 5183666c72eec9e4
+  
